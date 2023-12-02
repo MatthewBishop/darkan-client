@@ -296,8 +296,8 @@ public abstract class PathingEntity extends GraphNode_Sub1_Sub1 {
 	public int method12997() {
 		BASDefinitions renderanimdefs_2 = getRenderAnimDefs();
 		int i_3;
-		if (renderanimdefs_2.anInt2798 != -1)
-			i_3 = renderanimdefs_2.anInt2798;
+		if (renderanimdefs_2.character_height != -1)
+			i_3 = renderanimdefs_2.character_height;
 		else if (anInt10317 == -32768)
 			i_3 = 200;
 		else
@@ -375,8 +375,8 @@ public abstract class PathingEntity extends GraphNode_Sub1_Sub1 {
 		BASDefinitions renderanimdefs_2 = getRenderAnimDefs();
 		int i_3 = aClass19_10359.turnDirection;
 		boolean bool_4;
-		if (renderanimdefs_2.anInt2820 != 0)
-			bool_4 = aClass19_10359.method576(turnDirection, renderanimdefs_2.anInt2820, renderanimdefs_2.anInt2804);
+		if (renderanimdefs_2.yaw_acceleration != 0)
+			bool_4 = aClass19_10359.method576(turnDirection, renderanimdefs_2.yaw_acceleration, renderanimdefs_2.yaw_max_speed);
 		else
 			bool_4 = aClass19_10359.method576(turnDirection, anInt10340, anInt10340);
 
@@ -389,22 +389,22 @@ public abstract class PathingEntity extends GraphNode_Sub1_Sub1 {
 		}
 
 		if (bool_4) {
-			if (renderanimdefs_2.anInt2825 != 0)
+			if (renderanimdefs_2.roll_acceleration != 0)
 				if (i_5 > 0)
-					aClass19_10360.method576(renderanimdefs_2.anInt2824, renderanimdefs_2.anInt2825, renderanimdefs_2.anInt2823);
+					aClass19_10360.method576(renderanimdefs_2.roll_target_angle, renderanimdefs_2.roll_acceleration, renderanimdefs_2.roll_max_speed);
 				else
-					aClass19_10360.method576(-renderanimdefs_2.anInt2824, renderanimdefs_2.anInt2825, renderanimdefs_2.anInt2823);
+					aClass19_10360.method576(-renderanimdefs_2.roll_target_angle, renderanimdefs_2.roll_acceleration, renderanimdefs_2.roll_max_speed);
 
-			if (renderanimdefs_2.anInt2816 != 0)
-				aClass19_10330.method576(renderanimdefs_2.anInt2827, renderanimdefs_2.anInt2816, renderanimdefs_2.anInt2815);
+			if (renderanimdefs_2.pitch_acceleration != 0)
+				aClass19_10330.method576(renderanimdefs_2.pitch_target_angle, renderanimdefs_2.pitch_acceleration, renderanimdefs_2.pitch_max_speed);
 		} else {
-			if (renderanimdefs_2.anInt2825 != 0)
-				aClass19_10360.method576(0, renderanimdefs_2.anInt2825, renderanimdefs_2.anInt2823);
+			if (renderanimdefs_2.roll_acceleration != 0)
+				aClass19_10360.method576(0, renderanimdefs_2.roll_acceleration, renderanimdefs_2.roll_max_speed);
 			else
 				aClass19_10360.method577(0);
 
-			if (renderanimdefs_2.anInt2816 != 0)
-				aClass19_10330.method576(0, renderanimdefs_2.anInt2816, renderanimdefs_2.anInt2815);
+			if (renderanimdefs_2.pitch_acceleration != 0)
+				aClass19_10330.method576(0, renderanimdefs_2.pitch_acceleration, renderanimdefs_2.pitch_max_speed);
 			else
 				aClass19_10330.method577(0);
 		}
@@ -583,20 +583,20 @@ public abstract class PathingEntity extends GraphNode_Sub1_Sub1 {
 
 				MeshRasterizer meshrasterizer_14 = aMeshRasterizerArray10372[i_8 + 1] = spotanimdefinitions_11.method11228(graphicalrenderer_1, i_13, class161_10.animation, b_9);
 				if (meshrasterizer_14 != null) {
-					if (class161_10.anInt2011 >= 0 && renderanimdefs_2.anIntArrayArray2802 != null && renderanimdefs_2.anIntArrayArray2802[class161_10.anInt2011] != null) {
+					if (class161_10.anInt2011 >= 0 && renderanimdefs_2.equipmentTransforms != null && renderanimdefs_2.equipmentTransforms[class161_10.anInt2011] != null) {
 						int i_15 = 0;
 						int i_16 = 0;
 						int i_17 = 0;
-						if (renderanimdefs_2.anIntArrayArray2802 != null && renderanimdefs_2.anIntArrayArray2802[class161_10.anInt2011] != null) {
-							i_15 += renderanimdefs_2.anIntArrayArray2802[class161_10.anInt2011][0];
-							i_16 += renderanimdefs_2.anIntArrayArray2802[class161_10.anInt2011][1];
-							i_17 += renderanimdefs_2.anIntArrayArray2802[class161_10.anInt2011][2];
+						if (renderanimdefs_2.equipmentTransforms != null && renderanimdefs_2.equipmentTransforms[class161_10.anInt2011] != null) {
+							i_15 += renderanimdefs_2.equipmentTransforms[class161_10.anInt2011][0];
+							i_16 += renderanimdefs_2.equipmentTransforms[class161_10.anInt2011][1];
+							i_17 += renderanimdefs_2.equipmentTransforms[class161_10.anInt2011][2];
 						}
 
-						if (renderanimdefs_2.anIntArrayArray2791 != null && renderanimdefs_2.anIntArrayArray2791[class161_10.anInt2011] != null) {
-							i_15 += renderanimdefs_2.anIntArrayArray2791[class161_10.anInt2011][0];
-							i_16 += renderanimdefs_2.anIntArrayArray2791[class161_10.anInt2011][1];
-							i_17 += renderanimdefs_2.anIntArrayArray2791[class161_10.anInt2011][2];
+						if (renderanimdefs_2.spotAnimOffsets != null && renderanimdefs_2.spotAnimOffsets[class161_10.anInt2011] != null) {
+							i_15 += renderanimdefs_2.spotAnimOffsets[class161_10.anInt2011][0];
+							i_16 += renderanimdefs_2.spotAnimOffsets[class161_10.anInt2011][1];
+							i_17 += renderanimdefs_2.spotAnimOffsets[class161_10.anInt2011][2];
 						}
 
 						if (i_17 != 0 || i_15 != 0) {
@@ -654,7 +654,7 @@ public abstract class PathingEntity extends GraphNode_Sub1_Sub1 {
 
 	public void method15863(int i_1) {
 		BASDefinitions renderanimdefs_3 = getRenderAnimDefs();
-		if (renderanimdefs_3.anInt2820 != 0 || anInt10340 != 0) {
+		if (renderanimdefs_3.yaw_acceleration != 0 || anInt10340 != 0) {
 			aClass19_10359.method579();
 			int i_4 = i_1 - aClass19_10359.turnDirection & 0x3fff;
 			if (i_4 > 8192)
@@ -778,8 +778,8 @@ public abstract class PathingEntity extends GraphNode_Sub1_Sub1 {
 
 		BASDefinitions basDef = getRenderAnimDefs();
 		int i_5 = 256;
-		if (basDef.modelRotators != null && basDef.modelRotators[slot] > 0)
-			i_5 = basDef.modelRotators[slot];
+		if (basDef.max_equipment_rotation != null && basDef.max_equipment_rotation[slot] > 0)
+			i_5 = basDef.max_equipment_rotation[slot];
 
 		int i_6;
 		int i_7;
@@ -877,7 +877,7 @@ public abstract class PathingEntity extends GraphNode_Sub1_Sub1 {
 
 	public void turn(int i_1, boolean bool_2) {
 		BASDefinitions renderanimdefs_4 = getRenderAnimDefs();
-		if (bool_2 || renderanimdefs_4.anInt2820 != 0 || anInt10340 != 0) {
+		if (bool_2 || renderanimdefs_4.yaw_acceleration != 0 || anInt10340 != 0) {
 			turnDirection = i_1 & 0x3fff;
 			aClass19_10359.method577(turnDirection);
 		}

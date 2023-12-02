@@ -320,14 +320,14 @@ public class ProjectileAnimation extends GraphNode_Sub1_Sub1 {
 					BASDefinitions renderanimdefs_15 = ((PathingEntity) obj_2).getRenderAnimDefs();
 					int i_5 = 0;
 					int i_6 = 0;
-					if (renderanimdefs_15.anIntArrayArray2802 != null && renderanimdefs_15.anIntArrayArray2802[anInt10391] != null) {
-						i_5 += renderanimdefs_15.anIntArrayArray2802[anInt10391][0];
-						i_6 += renderanimdefs_15.anIntArrayArray2802[anInt10391][2];
+					if (renderanimdefs_15.equipmentTransforms != null && renderanimdefs_15.equipmentTransforms[anInt10391] != null) {
+						i_5 += renderanimdefs_15.equipmentTransforms[anInt10391][0];
+						i_6 += renderanimdefs_15.equipmentTransforms[anInt10391][2];
 					}
 
-					if (renderanimdefs_15.anIntArrayArray2791 != null && renderanimdefs_15.anIntArrayArray2791[anInt10391] != null) {
-						i_5 += renderanimdefs_15.anIntArrayArray2791[anInt10391][0];
-						i_6 += renderanimdefs_15.anIntArrayArray2791[anInt10391][2];
+					if (renderanimdefs_15.spotAnimOffsets != null && renderanimdefs_15.spotAnimOffsets[anInt10391] != null) {
+						i_5 += renderanimdefs_15.spotAnimOffsets[anInt10391][0];
+						i_6 += renderanimdefs_15.spotAnimOffsets[anInt10391][2];
 					}
 
 					if (i_5 != 0 || i_6 != 0) {

@@ -29,8 +29,8 @@ public class RankSetting extends ClanSetting {
 		BASDefinitions renderanimdefs_4 = npc_0.getRenderAnimDefs();
 		int i_5 = npc_0.aAnimation_Sub3_10337.method7597();
 		if (i_5 != -1 && !npc_0.aAnimation_Sub3_10337.aBool7891) {
-			if (i_5 != renderanimdefs_4.runningAnimation && i_5 != renderanimdefs_4.runDir3 && i_5 != renderanimdefs_4.runDir1 && i_5 != renderanimdefs_4.runDir2) {
-				if (i_5 == renderanimdefs_4.teleportingAnimation || i_5 == renderanimdefs_4.teleDir3 || i_5 == renderanimdefs_4.teleDir1 || i_5 == renderanimdefs_4.teleDir2)
+			if (i_5 != renderanimdefs_4.run_anim && i_5 != renderanimdefs_4.run_follow_full_turn_anim && i_5 != renderanimdefs_4.run_follow_cw_turn_anim && i_5 != renderanimdefs_4.run_follow_ccw_turn_anim) {
+				if (i_5 == renderanimdefs_4.slow_walk_anim || i_5 == renderanimdefs_4.slow_walk_follow_full_turn_anim || i_5 == renderanimdefs_4.slow_walk_follow_cw_turn_anim || i_5 == renderanimdefs_4.slow_walk_follow_ccw_turn_anim)
 					i_3 = npcdefinitions_2.rotate180Animation;
 			} else
 				i_3 = npcdefinitions_2.rotate90LeftAnimation;

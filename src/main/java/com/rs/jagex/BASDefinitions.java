@@ -6,178 +6,178 @@ public class BASDefinitions {
 
 	static int anInt2831;
 	public int renderAnimId;
-	public int standAnimation = -1;
-	public int walkAnimation = -1;
-	public int teleportingAnimation = -1;
-	public int teleDir3 = -1;
-	public int teleDir2 = -1;
-	public int teleDir1 = -1;
-	public int runningAnimation = -1;
-	public int runDir3 = -1;
-	public int runDir2 = -1;
-	public int runDir1 = -1;
-	public int anInt2786;
-	public int anInt2829;
-	public int[] anIntArray2811;
-	public int[][] anIntArrayArray2802;
-	public int anInt2820;
-	public int anInt2804;
-	public int anInt2825;
-	public int anInt2823;
-	public int anInt2824;
-	public int anInt2816;
-	public int anInt2815;
-	public int anInt2827;
-	public int anInt2826 = -1;
-	public int standTurn1 = -1;
-	public int standTurn2 = -1;
-	public int walkDir3 = -1;
-	public int walkDir2 = -1;
-	public int walkDir1 = -1;
-	public int anInt2798 = -1;
-	public int teleTurn1 = -1;
-	public int teleTurn2 = -1;
-	public int runTurn1 = -1;
-	public int runTurn2 = -1;
-	public int walkTurn1 = -1;
-	public int walkTurn2 = -1;
-	public int[] randomStandAnimations;
-	public int[] randomStandAnimationChances;
-	public boolean aBool2787 = true;
-	public int anInt2813;
-	public int anInt2790;
-	public int[] modelRotators;
-	public int[][] anIntArrayArray2791;
+	public int stand_animation = -1;
+	public int walk_animation = -1;
+	public int slow_walk_anim = -1;
+	public int slow_walk_follow_full_turn_anim = -1;
+	public int slow_walk_follow_ccw_turn_anim = -1;
+	public int slow_walk_follow_cw_turn_anim = -1;
+	public int run_anim = -1;
+	public int run_follow_full_turn_anim = -1;
+	public int run_follow_ccw_turn_anim = -1;
+	public int run_follow_cw_turn_anim = -1;
+	public int hill_width;
+	public int hill_height;
+	public int[] inv_item_slots;
+	public int[][] equipmentTransforms;
+	public int yaw_acceleration;
+	public int yaw_max_speed;
+	public int roll_acceleration;
+	public int roll_max_speed;
+	public int roll_target_angle;
+	public int pitch_acceleration;
+	public int pitch_max_speed;
+	public int pitch_target_angle;
+	public int movement_acceleration = -1;
+	public int standing_ccw_turn = -1;
+	public int standing_cw_turn = -1;
+	public int walk_follow_full_turn_anim = -1;
+	public int walk_follow_ccw_turn_anim = -1;
+	public int walk_follow_cw_turn_anim = -1;
+	public int character_height = -1;
+	public int slow_walk_ccw_turn_anim = -1;
+	public int slow_walk_cw_turn_anim = -1;
+	public int run_ccw_turn_anim = -1;
+	public int run_cw_turn_anim = -1;
+	public int walk_ccw_turn_anim = -1;
+	public int walk_cw_turn_anim = -1;
+	public int[] idle_anims;
+	public int[] idle_anim_weight;
+	public boolean animate_shadow = true;
+	public int hill_max_angle_x;
+	public int hill_max_angle_z;
+	public int[] max_equipment_rotation;
+	public int[][] spotAnimOffsets;
 	RenderAnimIndexLoader aClass211_2788;
 	int totalChance;
 	Matrix44Var[] matrices;
 
 	public int getStandAnimation() {
-		if (standAnimation != -1)
-			return standAnimation;
-		if (randomStandAnimations == null)
+		if (stand_animation != -1)
+			return stand_animation;
+		if (idle_anims == null)
 			return -1;
 		else {
 			int i_2 = (int) (Math.random() * totalChance);
 			int i_3;
-			for (i_3 = 0; i_2 >= randomStandAnimationChances[i_3]; i_3++)
-				i_2 -= randomStandAnimationChances[i_3];
-			return randomStandAnimations[i_3];
+			for (i_3 = 0; i_2 >= idle_anim_weight[i_3]; i_3++)
+				i_2 -= idle_anim_weight[i_3];
+			return idle_anims[i_3];
 		}
 	}
 
 	void method3808(ByteBuf rsbytebuffer_1, int i_2) {
 		if (i_2 == 1) {
-			standAnimation = rsbytebuffer_1.readBigSmart();
-			walkAnimation = rsbytebuffer_1.readBigSmart();
+			stand_animation = rsbytebuffer_1.readBigSmart();
+			walk_animation = rsbytebuffer_1.readBigSmart();
 		} else if (i_2 == 2)
-			teleportingAnimation = rsbytebuffer_1.readBigSmart();
+			slow_walk_anim = rsbytebuffer_1.readBigSmart();
 		else if (i_2 == 3)
-			teleDir3 = rsbytebuffer_1.readBigSmart();
+			slow_walk_follow_full_turn_anim = rsbytebuffer_1.readBigSmart();
 		else if (i_2 == 4)
-			teleDir2 = rsbytebuffer_1.readBigSmart();
+			slow_walk_follow_ccw_turn_anim = rsbytebuffer_1.readBigSmart();
 		else if (i_2 == 5)
-			teleDir1 = rsbytebuffer_1.readBigSmart();
+			slow_walk_follow_cw_turn_anim = rsbytebuffer_1.readBigSmart();
 		else if (i_2 == 6)
-			runningAnimation = rsbytebuffer_1.readBigSmart();
+			run_anim = rsbytebuffer_1.readBigSmart();
 		else if (i_2 == 7)
-			runDir3 = rsbytebuffer_1.readBigSmart();
+			run_follow_full_turn_anim = rsbytebuffer_1.readBigSmart();
 		else if (i_2 == 8)
-			runDir2 = rsbytebuffer_1.readBigSmart();
+			run_follow_ccw_turn_anim = rsbytebuffer_1.readBigSmart();
 		else if (i_2 == 9)
-			runDir1 = rsbytebuffer_1.readBigSmart();
+			run_follow_cw_turn_anim = rsbytebuffer_1.readBigSmart();
 		else if (i_2 == 26) {
-			anInt2786 = (short) (rsbytebuffer_1.readUnsignedByte() * 4);
-			anInt2829 = (short) (rsbytebuffer_1.readUnsignedByte() * 4);
+			hill_width = (short) (rsbytebuffer_1.readUnsignedByte() * 4);
+			hill_height = (short) (rsbytebuffer_1.readUnsignedByte() * 4);
 		} else {
 			int i_4;
 			int i_5;
 			if (i_2 == 27) {
-				if (anIntArrayArray2802 == null)
-					anIntArrayArray2802 = new int[aClass211_2788.aClass526_2672.hidden.length][];
+				if (equipmentTransforms == null)
+					equipmentTransforms = new int[aClass211_2788.aClass526_2672.hidden.length][];
 				i_4 = rsbytebuffer_1.readUnsignedByte();
-				anIntArrayArray2802[i_4] = new int[6];
+				equipmentTransforms[i_4] = new int[6];
 				for (i_5 = 0; i_5 < 6; i_5++)
-					anIntArrayArray2802[i_4][i_5] = rsbytebuffer_1.readShort();
+					equipmentTransforms[i_4][i_5] = rsbytebuffer_1.readShort();
 			} else if (i_2 == 28) {
 				i_4 = rsbytebuffer_1.readUnsignedByte();
-				anIntArray2811 = new int[i_4];
+				inv_item_slots = new int[i_4];
 				for (i_5 = 0; i_5 < i_4; i_5++) {
-					anIntArray2811[i_5] = rsbytebuffer_1.readUnsignedByte();
-					if (anIntArray2811[i_5] == 255)
-						anIntArray2811[i_5] = -1;
+					inv_item_slots[i_5] = rsbytebuffer_1.readUnsignedByte();
+					if (inv_item_slots[i_5] == 255)
+						inv_item_slots[i_5] = -1;
 				}
 			} else if (i_2 == 29)
-				anInt2820 = rsbytebuffer_1.readUnsignedByte();
+				yaw_acceleration = rsbytebuffer_1.readUnsignedByte();
 			else if (i_2 == 30)
-				anInt2804 = rsbytebuffer_1.readUnsignedShort();
+				yaw_max_speed = rsbytebuffer_1.readUnsignedShort();
 			else if (i_2 == 31)
-				anInt2825 = rsbytebuffer_1.readUnsignedByte();
+				roll_acceleration = rsbytebuffer_1.readUnsignedByte();
 			else if (i_2 == 32)
-				anInt2823 = rsbytebuffer_1.readUnsignedShort();
+				roll_max_speed = rsbytebuffer_1.readUnsignedShort();
 			else if (i_2 == 33)
-				anInt2824 = rsbytebuffer_1.readShort();
+				roll_target_angle = rsbytebuffer_1.readShort();
 			else if (i_2 == 34)
-				anInt2816 = rsbytebuffer_1.readUnsignedByte();
+				pitch_acceleration = rsbytebuffer_1.readUnsignedByte();
 			else if (i_2 == 35)
-				anInt2815 = rsbytebuffer_1.readUnsignedShort();
+				pitch_max_speed = rsbytebuffer_1.readUnsignedShort();
 			else if (i_2 == 36)
-				anInt2827 = rsbytebuffer_1.readShort();
+				pitch_target_angle = rsbytebuffer_1.readShort();
 			else if (i_2 == 37)
-				anInt2826 = rsbytebuffer_1.readUnsignedByte();
+				movement_acceleration = rsbytebuffer_1.readUnsignedByte();
 			else if (i_2 == 38)
-				standTurn1 = rsbytebuffer_1.readBigSmart();
+				standing_ccw_turn = rsbytebuffer_1.readBigSmart();
 			else if (i_2 == 39)
-				standTurn2 = rsbytebuffer_1.readBigSmart();
+				standing_cw_turn = rsbytebuffer_1.readBigSmart();
 			else if (i_2 == 40)
-				walkDir3 = rsbytebuffer_1.readBigSmart();
+				walk_follow_full_turn_anim = rsbytebuffer_1.readBigSmart();
 			else if (i_2 == 41)
-				walkDir2 = rsbytebuffer_1.readBigSmart();
+				walk_follow_ccw_turn_anim = rsbytebuffer_1.readBigSmart();
 			else if (i_2 == 42)
-				walkDir1 = rsbytebuffer_1.readBigSmart();
+				walk_follow_cw_turn_anim = rsbytebuffer_1.readBigSmart();
 			else if ((i_2 == 43) || (i_2 == 44))
 				rsbytebuffer_1.readUnsignedShort();
 			else if (i_2 == 45)
-				anInt2798 = rsbytebuffer_1.readUnsignedShort();
+				character_height = rsbytebuffer_1.readUnsignedShort();
 			else if (i_2 == 46)
-				teleTurn1 = rsbytebuffer_1.readBigSmart();
+				slow_walk_ccw_turn_anim = rsbytebuffer_1.readBigSmart();
 			else if (i_2 == 47)
-				teleTurn2 = rsbytebuffer_1.readBigSmart();
+				slow_walk_cw_turn_anim = rsbytebuffer_1.readBigSmart();
 			else if (i_2 == 48)
-				runTurn1 = rsbytebuffer_1.readBigSmart();
+				run_ccw_turn_anim = rsbytebuffer_1.readBigSmart();
 			else if (i_2 == 49)
-				runTurn2 = rsbytebuffer_1.readBigSmart();
+				run_cw_turn_anim = rsbytebuffer_1.readBigSmart();
 			else if (i_2 == 50)
-				walkTurn1 = rsbytebuffer_1.readBigSmart();
+				walk_ccw_turn_anim = rsbytebuffer_1.readBigSmart();
 			else if (i_2 == 51)
-				walkTurn2 = rsbytebuffer_1.readBigSmart();
+				walk_cw_turn_anim = rsbytebuffer_1.readBigSmart();
 			else if (i_2 == 52) {
 				i_4 = rsbytebuffer_1.readUnsignedByte();
-				randomStandAnimations = new int[i_4];
-				randomStandAnimationChances = new int[i_4];
+				idle_anims = new int[i_4];
+				idle_anim_weight = new int[i_4];
 				for (i_5 = 0; i_5 < i_4; i_5++) {
-					randomStandAnimations[i_5] = rsbytebuffer_1.readBigSmart();
+					idle_anims[i_5] = rsbytebuffer_1.readBigSmart();
 					int i_6 = rsbytebuffer_1.readUnsignedByte();
-					randomStandAnimationChances[i_5] = i_6;
+					idle_anim_weight[i_5] = i_6;
 					totalChance += i_6;
 				}
 			} else if (i_2 == 53)
-				aBool2787 = false;
+				animate_shadow = false;
 			else if (i_2 == 54) {
-				anInt2813 = rsbytebuffer_1.readUnsignedByte() << 6;
-				anInt2790 = rsbytebuffer_1.readUnsignedByte() << 6;
+				hill_max_angle_x = rsbytebuffer_1.readUnsignedByte() << 6;
+				hill_max_angle_z = rsbytebuffer_1.readUnsignedByte() << 6;
 			} else if (i_2 == 55) {
-				if (modelRotators == null)
-					modelRotators = new int[aClass211_2788.aClass526_2672.hidden.length];
+				if (max_equipment_rotation == null)
+					max_equipment_rotation = new int[aClass211_2788.aClass526_2672.hidden.length];
 				i_4 = rsbytebuffer_1.readUnsignedByte();
-				modelRotators[i_4] = rsbytebuffer_1.readUnsignedShort();
+				max_equipment_rotation[i_4] = rsbytebuffer_1.readUnsignedShort();
 			} else if (i_2 == 56) {
-				if (anIntArrayArray2791 == null)
-					anIntArrayArray2791 = new int[aClass211_2788.aClass526_2672.hidden.length][];
+				if (spotAnimOffsets == null)
+					spotAnimOffsets = new int[aClass211_2788.aClass526_2672.hidden.length][];
 				i_4 = rsbytebuffer_1.readUnsignedByte();
-				anIntArrayArray2791[i_4] = new int[3];
+				spotAnimOffsets[i_4] = new int[3];
 				for (i_5 = 0; i_5 < 3; i_5++)
-					anIntArrayArray2791[i_4][i_5] = rsbytebuffer_1.readShort();
+					spotAnimOffsets[i_4][i_5] = rsbytebuffer_1.readShort();
 			}
 		}
 	}
@@ -185,11 +185,11 @@ public class BASDefinitions {
 	public boolean method3810(int i_1) {
 		if (i_1 == -1)
 			return false;
-		if (standAnimation == i_1)
+		if (stand_animation == i_1)
 			return true;
 		else {
-			if (randomStandAnimations != null)
-				for (int randomStandAnimation : randomStandAnimations)
+			if (idle_anims != null)
+				for (int randomStandAnimation : idle_anims)
 					if (randomStandAnimation == i_1)
 						return true;
 			return false;
@@ -199,24 +199,24 @@ public class BASDefinitions {
 	public Matrix44Var[] method3811() {
 		if (matrices != null)
 			return matrices;
-		if (anIntArrayArray2802 == null)
+		if (equipmentTransforms == null)
 			return null;
 		else {
-			matrices = new Matrix44Var[anIntArrayArray2802.length];
-			for (int i = 0; i < anIntArrayArray2802.length; i++) {
+			matrices = new Matrix44Var[equipmentTransforms.length];
+			for (int i = 0; i < equipmentTransforms.length; i++) {
 				int i_3 = 0;
 				int i_4 = 0;
 				int i_5 = 0;
 				int xRot = 0;
 				int yRot = 0;
 				int zRot = 0;
-				if (anIntArrayArray2802[i] != null) {
-					i_3 = anIntArrayArray2802[i][0];
-					i_4 = anIntArrayArray2802[i][1];
-					i_5 = anIntArrayArray2802[i][2];
-					xRot = anIntArrayArray2802[i][3] << 3;
-					yRot = anIntArrayArray2802[i][4] << 3;
-					zRot = anIntArrayArray2802[i][5] << 3;
+				if (equipmentTransforms[i] != null) {
+					i_3 = equipmentTransforms[i][0];
+					i_4 = equipmentTransforms[i][1];
+					i_5 = equipmentTransforms[i][2];
+					xRot = equipmentTransforms[i][3] << 3;
+					yRot = equipmentTransforms[i][4] << 3;
+					zRot = equipmentTransforms[i][5] << 3;
 				}
 				if (i_3 != 0 || i_4 != 0 || i_5 != 0 || xRot != 0 || yRot != 0 || zRot != 0) {
 					Matrix44Var matrix = matrices[i] = new Matrix44Var();
@@ -244,36 +244,36 @@ public class BASDefinitions {
 
 	public int[] method3828() {
 		IterableNodeMap<Node> iterablenodemap_2 = new IterableNodeMap<>(16);
-		AccountCreationStage.method253(standAnimation, iterablenodemap_2);
+		AccountCreationStage.method253(stand_animation, iterablenodemap_2);
 		int[] ints_3;
 		int i_4;
-		if (randomStandAnimations != null) {
-			ints_3 = randomStandAnimations;
+		if (idle_anims != null) {
+			ints_3 = idle_anims;
 			for (i_4 = 0; i_4 < ints_3.length; i_4++) {
 				int i_7 = ints_3[i_4];
 				AccountCreationStage.method253(i_7, iterablenodemap_2);
 			}
 		}
-		AccountCreationStage.method253(standTurn1, iterablenodemap_2);
-		AccountCreationStage.method253(standTurn2, iterablenodemap_2);
-		AccountCreationStage.method253(walkAnimation, iterablenodemap_2);
-		AccountCreationStage.method253(walkDir3, iterablenodemap_2);
-		AccountCreationStage.method253(walkDir2, iterablenodemap_2);
-		AccountCreationStage.method253(walkDir1, iterablenodemap_2);
-		AccountCreationStage.method253(runningAnimation, iterablenodemap_2);
-		AccountCreationStage.method253(runDir3, iterablenodemap_2);
-		AccountCreationStage.method253(runDir2, iterablenodemap_2);
-		AccountCreationStage.method253(runDir1, iterablenodemap_2);
-		AccountCreationStage.method253(teleportingAnimation, iterablenodemap_2);
-		AccountCreationStage.method253(teleDir3, iterablenodemap_2);
-		AccountCreationStage.method253(teleDir2, iterablenodemap_2);
-		AccountCreationStage.method253(teleDir1, iterablenodemap_2);
-		AccountCreationStage.method253(teleTurn1, iterablenodemap_2);
-		AccountCreationStage.method253(teleTurn2, iterablenodemap_2);
-		AccountCreationStage.method253(runTurn1, iterablenodemap_2);
-		AccountCreationStage.method253(runTurn2, iterablenodemap_2);
-		AccountCreationStage.method253(walkTurn1, iterablenodemap_2);
-		AccountCreationStage.method253(walkTurn2, iterablenodemap_2);
+		AccountCreationStage.method253(standing_ccw_turn, iterablenodemap_2);
+		AccountCreationStage.method253(standing_cw_turn, iterablenodemap_2);
+		AccountCreationStage.method253(walk_animation, iterablenodemap_2);
+		AccountCreationStage.method253(walk_follow_full_turn_anim, iterablenodemap_2);
+		AccountCreationStage.method253(walk_follow_ccw_turn_anim, iterablenodemap_2);
+		AccountCreationStage.method253(walk_follow_cw_turn_anim, iterablenodemap_2);
+		AccountCreationStage.method253(run_anim, iterablenodemap_2);
+		AccountCreationStage.method253(run_follow_full_turn_anim, iterablenodemap_2);
+		AccountCreationStage.method253(run_follow_ccw_turn_anim, iterablenodemap_2);
+		AccountCreationStage.method253(run_follow_cw_turn_anim, iterablenodemap_2);
+		AccountCreationStage.method253(slow_walk_anim, iterablenodemap_2);
+		AccountCreationStage.method253(slow_walk_follow_full_turn_anim, iterablenodemap_2);
+		AccountCreationStage.method253(slow_walk_follow_ccw_turn_anim, iterablenodemap_2);
+		AccountCreationStage.method253(slow_walk_follow_cw_turn_anim, iterablenodemap_2);
+		AccountCreationStage.method253(slow_walk_ccw_turn_anim, iterablenodemap_2);
+		AccountCreationStage.method253(slow_walk_cw_turn_anim, iterablenodemap_2);
+		AccountCreationStage.method253(run_ccw_turn_anim, iterablenodemap_2);
+		AccountCreationStage.method253(run_cw_turn_anim, iterablenodemap_2);
+		AccountCreationStage.method253(walk_ccw_turn_anim, iterablenodemap_2);
+		AccountCreationStage.method253(walk_cw_turn_anim, iterablenodemap_2);
 		ints_3 = new int[iterablenodemap_2.size()];
 		i_4 = 0;
 		Node node_6;

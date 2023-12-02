@@ -163,8 +163,8 @@ public class PlayerModel {
 							}
 						}
 						int i_54;
-						if (renderanimdefs_51 != null && renderanimdefs_51.anIntArrayArray2802 != null)
-							for (i_31 = 0; i_31 < renderanimdefs_51.anIntArrayArray2802.length; i_31++)
+						if (renderanimdefs_51 != null && renderanimdefs_51.equipmentTransforms != null)
+							for (i_31 = 0; i_31 < renderanimdefs_51.equipmentTransforms.length; i_31++)
 								if (arr_56[i_31] != null) {
 									i_41 = 0;
 									i_54 = 0;
@@ -172,13 +172,13 @@ public class PlayerModel {
 									int i_43 = 0;
 									int i_36 = 0;
 									int i_37 = 0;
-									if (renderanimdefs_51.anIntArrayArray2802[i_31] != null) {
-										i_41 = renderanimdefs_51.anIntArrayArray2802[i_31][0];
-										i_54 = renderanimdefs_51.anIntArrayArray2802[i_31][1];
-										i_34 = renderanimdefs_51.anIntArrayArray2802[i_31][2];
-										i_43 = renderanimdefs_51.anIntArrayArray2802[i_31][3] << 3;
-										i_36 = renderanimdefs_51.anIntArrayArray2802[i_31][4] << 3;
-										i_37 = renderanimdefs_51.anIntArrayArray2802[i_31][5] << 3;
+									if (renderanimdefs_51.equipmentTransforms[i_31] != null) {
+										i_41 = renderanimdefs_51.equipmentTransforms[i_31][0];
+										i_54 = renderanimdefs_51.equipmentTransforms[i_31][1];
+										i_34 = renderanimdefs_51.equipmentTransforms[i_31][2];
+										i_43 = renderanimdefs_51.equipmentTransforms[i_31][3] << 3;
+										i_36 = renderanimdefs_51.equipmentTransforms[i_31][4] << 3;
+										i_37 = renderanimdefs_51.equipmentTransforms[i_31][5] << 3;
 									}
 									if (i_43 != 0 || i_36 != 0 || i_37 != 0)
 										arr_56[i_31].method2671(i_43, i_36, i_37);

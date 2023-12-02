@@ -21,11 +21,11 @@ public class Class302 {
 					animation.animate(renderAnim.getStandAnimation());
 					animation.aBool7891 = animation.hasDefs();
 				}
-			} else if (i_3 < 0 && renderAnim.standTurn1 != -1) {
-				animation.animate(renderAnim.standTurn1);
+			} else if (i_3 < 0 && renderAnim.standing_ccw_turn != -1) {
+				animation.animate(renderAnim.standing_ccw_turn);
 				animation.aBool7891 = false;
-			} else if (i_3 > 0 && renderAnim.standTurn2 != -1) {
-				animation.animate(renderAnim.standTurn2);
+			} else if (i_3 > 0 && renderAnim.standing_cw_turn != -1) {
+				animation.animate(renderAnim.standing_cw_turn);
 				animation.aBool7891 = false;
 			} else if (!animation.aBool7891 || !renderAnim.method3810(animation.method7597())) {
 				animation.animate(renderAnim.getStandAnimation());
@@ -33,61 +33,61 @@ public class Class302 {
 			}
 		} else if (animable.faceEntity == -1 || turnDirection < 10240 && turnDirection > 2048) {
 			if (turnDirection == 0 && animable.turningTicks <= 25) {
-				if (moveType == MoveSpeed.RUNNING.id && renderAnim.runningAnimation != -1)
-					animation.animate(renderAnim.runningAnimation);
-				else if (moveType == MoveSpeed.HALF_WALK.id && renderAnim.teleportingAnimation != -1)
-					animation.animate(renderAnim.teleportingAnimation);
+				if (moveType == MoveSpeed.RUNNING.id && renderAnim.run_anim != -1)
+					animation.animate(renderAnim.run_anim);
+				else if (moveType == MoveSpeed.HALF_WALK.id && renderAnim.slow_walk_anim != -1)
+					animation.animate(renderAnim.slow_walk_anim);
 				else
-					animation.animate(renderAnim.walkAnimation);
-			} else if (moveType == MoveSpeed.RUNNING.id && renderAnim.runningAnimation != -1) {
-				if (i_3 < 0 && renderAnim.runTurn1 != -1)
-					animation.animate(renderAnim.runTurn1);
-				else if (i_3 > 0 && renderAnim.runTurn2 != -1)
-					animation.animate(renderAnim.runTurn2);
+					animation.animate(renderAnim.walk_animation);
+			} else if (moveType == MoveSpeed.RUNNING.id && renderAnim.run_anim != -1) {
+				if (i_3 < 0 && renderAnim.run_ccw_turn_anim != -1)
+					animation.animate(renderAnim.run_ccw_turn_anim);
+				else if (i_3 > 0 && renderAnim.run_cw_turn_anim != -1)
+					animation.animate(renderAnim.run_cw_turn_anim);
 				else
-					animation.animate(renderAnim.runningAnimation);
-			} else if (moveType == MoveSpeed.HALF_WALK.id && renderAnim.teleportingAnimation != -1) {
-				if (i_3 < 0 && renderAnim.teleTurn1 != -1)
-					animation.animate(renderAnim.teleTurn1);
-				else if (i_3 > 0 && renderAnim.teleTurn2 != -1)
-					animation.animate(renderAnim.teleTurn2);
+					animation.animate(renderAnim.run_anim);
+			} else if (moveType == MoveSpeed.HALF_WALK.id && renderAnim.slow_walk_anim != -1) {
+				if (i_3 < 0 && renderAnim.slow_walk_ccw_turn_anim != -1)
+					animation.animate(renderAnim.slow_walk_ccw_turn_anim);
+				else if (i_3 > 0 && renderAnim.slow_walk_cw_turn_anim != -1)
+					animation.animate(renderAnim.slow_walk_cw_turn_anim);
 				else
-					animation.animate(renderAnim.teleportingAnimation);
-			} else if (i_3 < 0 && renderAnim.walkTurn1 != -1)
-				animation.animate(renderAnim.walkTurn1);
-			else if (i_3 > 0 && renderAnim.walkTurn2 != -1)
-				animation.animate(renderAnim.walkTurn2);
+					animation.animate(renderAnim.slow_walk_anim);
+			} else if (i_3 < 0 && renderAnim.walk_ccw_turn_anim != -1)
+				animation.animate(renderAnim.walk_ccw_turn_anim);
+			else if (i_3 > 0 && renderAnim.walk_cw_turn_anim != -1)
+				animation.animate(renderAnim.walk_cw_turn_anim);
 			else
-				animation.animate(renderAnim.walkAnimation);
+				animation.animate(renderAnim.walk_animation);
 			animation.aBool7891 = false;
 		} else {
 			int walkDirection = client.NPC_TURN_DIRECTIONS[i_2] - animable.aClass19_10359.turnDirection & 0x3fff;
-			if (moveType == MoveSpeed.RUNNING.id && renderAnim.runningAnimation != -1) {
-				if (walkDirection > 2048 && walkDirection <= 6144 && renderAnim.runDir1 != -1)
-					animation.animate(renderAnim.runDir1);
-				else if (walkDirection >= 10240 && walkDirection < 14336 && renderAnim.runDir2 != -1)
-					animation.animate(renderAnim.runDir2);
-				else if (walkDirection > 6144 && walkDirection < 10240 && renderAnim.runDir3 != -1)
-					animation.animate(renderAnim.runDir3);
+			if (moveType == MoveSpeed.RUNNING.id && renderAnim.run_anim != -1) {
+				if (walkDirection > 2048 && walkDirection <= 6144 && renderAnim.run_follow_cw_turn_anim != -1)
+					animation.animate(renderAnim.run_follow_cw_turn_anim);
+				else if (walkDirection >= 10240 && walkDirection < 14336 && renderAnim.run_follow_ccw_turn_anim != -1)
+					animation.animate(renderAnim.run_follow_ccw_turn_anim);
+				else if (walkDirection > 6144 && walkDirection < 10240 && renderAnim.run_follow_full_turn_anim != -1)
+					animation.animate(renderAnim.run_follow_full_turn_anim);
 				else
-					animation.animate(renderAnim.runningAnimation);
-			} else if (moveType == MoveSpeed.HALF_WALK.id && renderAnim.teleportingAnimation != -1) {
-				if (walkDirection > 2048 && walkDirection <= 6144 && renderAnim.teleDir1 != -1)
-					animation.animate(renderAnim.teleDir1);
-				else if (walkDirection >= 10240 && walkDirection < 14336 && renderAnim.teleDir2 != -1)
-					animation.animate(renderAnim.teleDir2);
-				else if (walkDirection > 6144 && walkDirection < 10240 && renderAnim.teleDir3 != -1)
-					animation.animate(renderAnim.teleDir3);
+					animation.animate(renderAnim.run_anim);
+			} else if (moveType == MoveSpeed.HALF_WALK.id && renderAnim.slow_walk_anim != -1) {
+				if (walkDirection > 2048 && walkDirection <= 6144 && renderAnim.slow_walk_follow_cw_turn_anim != -1)
+					animation.animate(renderAnim.slow_walk_follow_cw_turn_anim);
+				else if (walkDirection >= 10240 && walkDirection < 14336 && renderAnim.slow_walk_follow_ccw_turn_anim != -1)
+					animation.animate(renderAnim.slow_walk_follow_ccw_turn_anim);
+				else if (walkDirection > 6144 && walkDirection < 10240 && renderAnim.slow_walk_follow_full_turn_anim != -1)
+					animation.animate(renderAnim.slow_walk_follow_full_turn_anim);
 				else
-					animation.animate(renderAnim.teleportingAnimation);
-			} else if (walkDirection > 2048 && walkDirection <= 6144 && renderAnim.walkDir1 != -1)
-				animation.animate(renderAnim.walkDir1);
-			else if (walkDirection >= 10240 && walkDirection < 14336 && renderAnim.walkDir2 != -1)
-				animation.animate(renderAnim.walkDir2);
-			else if (walkDirection > 6144 && walkDirection < 10240 && renderAnim.walkDir3 != -1)
-				animation.animate(renderAnim.walkDir3);
+					animation.animate(renderAnim.slow_walk_anim);
+			} else if (walkDirection > 2048 && walkDirection <= 6144 && renderAnim.walk_follow_cw_turn_anim != -1)
+				animation.animate(renderAnim.walk_follow_cw_turn_anim);
+			else if (walkDirection >= 10240 && walkDirection < 14336 && renderAnim.walk_follow_ccw_turn_anim != -1)
+				animation.animate(renderAnim.walk_follow_ccw_turn_anim);
+			else if (walkDirection > 6144 && walkDirection < 10240 && renderAnim.walk_follow_full_turn_anim != -1)
+				animation.animate(renderAnim.walk_follow_full_turn_anim);
 			else
-				animation.animate(renderAnim.walkAnimation);
+				animation.animate(renderAnim.walk_animation);
 			animation.aBool7891 = false;
 		}
 	}

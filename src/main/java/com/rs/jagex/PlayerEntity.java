@@ -291,7 +291,7 @@ public class PlayerEntity extends PathingEntity {
 		aBool10312 = false;
 		if (Class393.preferences.characterShadows.method12966() == 1) {
 			BASDefinitions renderanimdefs_8 = getRenderAnimDefs();
-			if (renderanimdefs_8.aBool2787 && (-977770149 * model.mimickingNpcId * 232890067 == -1 || IndexLoaders.NPC_INDEX_LOADER.getNPCType(model.mimickingNpcId * 232890067 * -977770149).aBool4912)) {
+			if (renderanimdefs_8.animate_shadow && (-977770149 * model.mimickingNpcId * 232890067 == -1 || IndexLoaders.NPC_INDEX_LOADER.getNPCType(model.mimickingNpcId * 232890067 * -977770149).aBool4912)) {
 				Animation animation_9 = currentAnimation.hasDefs() && currentAnimation.hasSpeed() ? currentAnimation : null;
 				MovingAnimation class456_sub3_10 = aAnimation_Sub3_10337.hasDefs() && (!aAnimation_Sub3_10337.aBool7891 || animation_9 == null) ? aAnimation_Sub3_10337 : null;
 				MeshRasterizer meshrasterizer_11 = SongReference.method1969(graphicalrenderer_1, -35614997 * anInt10322 * 2085530051, anInt10323 * 884618779 * -1768311789, -628205413 * anInt10363 * -1453470317, 1, aMeshRasterizerArray10372[0], 0, 0, 160, 240, class456_sub3_10 != null ? class456_sub3_10 : animation_9);
@@ -397,7 +397,7 @@ public class PlayerEntity extends PathingEntity {
 		aBool10312 = false;
 		if (Class393.preferences.characterShadows.method12966() == 1) {
 			BASDefinitions renderanimdefs_9 = getRenderAnimDefs();
-			if (renderanimdefs_9.aBool2787 && (model.mimickingNpcId == -1 || IndexLoaders.NPC_INDEX_LOADER.getNPCType(model.mimickingNpcId).aBool4912)) {
+			if (renderanimdefs_9.animate_shadow && (model.mimickingNpcId == -1 || IndexLoaders.NPC_INDEX_LOADER.getNPCType(model.mimickingNpcId).aBool4912)) {
 				Animation animation_10 = currentAnimation.hasDefs() && currentAnimation.hasSpeed() ? currentAnimation : null;
 				MovingAnimation class456_sub3_11 = aAnimation_Sub3_10337.hasDefs() && (!aAnimation_Sub3_10337.aBool7891 || animation_10 == null) ? aAnimation_Sub3_10337 : null;
 				MeshRasterizer meshrasterizer_12 = SongReference.method1969(graphicalrenderer_1, anInt10322, anInt10323, anInt10363, 1, aMeshRasterizerArray10372[0], 0, 0, 160, 240, class456_sub3_11 != null ? class456_sub3_11 : animation_10);
@@ -526,7 +526,7 @@ public class PlayerEntity extends PathingEntity {
 		aBool10312 = false;
 		if (Class393.preferences.characterShadows.method12966() == 1) {
 			BASDefinitions renderanimdefs_8 = getRenderAnimDefs();
-			if (renderanimdefs_8.aBool2787 && (-977770149 * model.mimickingNpcId * 232890067 == -1 || IndexLoaders.NPC_INDEX_LOADER.getNPCType(model.mimickingNpcId * 232890067 * -977770149).aBool4912)) {
+			if (renderanimdefs_8.animate_shadow && (-977770149 * model.mimickingNpcId * 232890067 == -1 || IndexLoaders.NPC_INDEX_LOADER.getNPCType(model.mimickingNpcId * 232890067 * -977770149).aBool4912)) {
 				Animation animation_9 = currentAnimation.hasDefs() && currentAnimation.hasSpeed() ? currentAnimation : null;
 				MovingAnimation class456_sub3_10 = aAnimation_Sub3_10337.hasDefs() && (!aAnimation_Sub3_10337.aBool7891 || animation_9 == null) ? aAnimation_Sub3_10337 : null;
 				MeshRasterizer meshrasterizer_11 = SongReference.method1969(graphicalrenderer_1, -35614997 * anInt10322 * 2085530051, anInt10323 * 884618779 * -1768311789, -628205413 * anInt10363 * -1453470317, 1, aMeshRasterizerArray10372[0], 0, 0, 160, 240, class456_sub3_10 != null ? class456_sub3_10 : animation_9);
@@ -632,7 +632,7 @@ public class PlayerEntity extends PathingEntity {
 		aBool10312 = false;
 		if (Class393.preferences.characterShadows.method12966() == 1) {
 			BASDefinitions renderanimdefs_8 = getRenderAnimDefs();
-			if (renderanimdefs_8.aBool2787 && (-977770149 * model.mimickingNpcId * 232890067 == -1 || IndexLoaders.NPC_INDEX_LOADER.getNPCType(model.mimickingNpcId * 232890067 * -977770149).aBool4912)) {
+			if (renderanimdefs_8.animate_shadow && (-977770149 * model.mimickingNpcId * 232890067 == -1 || IndexLoaders.NPC_INDEX_LOADER.getNPCType(model.mimickingNpcId * 232890067 * -977770149).aBool4912)) {
 				Animation animation_9 = currentAnimation.hasDefs() && currentAnimation.hasSpeed() ? currentAnimation : null;
 				MovingAnimation class456_sub3_10 = aAnimation_Sub3_10337.hasDefs() && (!aAnimation_Sub3_10337.aBool7891 || animation_9 == null) ? aAnimation_Sub3_10337 : null;
 				MeshRasterizer meshrasterizer_11 = SongReference.method1969(graphicalrenderer_1, -35614997 * anInt10322 * 2085530051, anInt10323 * 884618779 * -1768311789, -628205413 * anInt10363 * -1453470317, 1, aMeshRasterizerArray10372[0], 0, 0, 160, 240, class456_sub3_10 != null ? class456_sub3_10 : animation_9);
@@ -987,9 +987,9 @@ public class PlayerEntity extends PathingEntity {
 		BASDefinitions renderanimdefs_5 = getRenderAnimDefs();
 		Animation animation_6 = currentAnimation.hasDefs() && !currentAnimation.hasSpeed() ? currentAnimation : null;
 		MovingAnimation class456_sub3_7 = !aAnimation_Sub3_10337.hasDefs() || aBool10573 || aAnimation_Sub3_10337.aBool7891 && animation_6 != null ? null : aAnimation_Sub3_10337;
-		int i_8 = renderanimdefs_5.anInt2786;
-		int i_9 = renderanimdefs_5.anInt2829;
-		if (i_8 != 0 || i_9 != 0 || renderanimdefs_5.anInt2824 != 0 || renderanimdefs_5.anInt2827 != 0)
+		int i_8 = renderanimdefs_5.hill_width;
+		int i_9 = renderanimdefs_5.hill_height;
+		if (i_8 != 0 || i_9 != 0 || renderanimdefs_5.roll_target_angle != 0 || renderanimdefs_5.pitch_target_angle != 0)
 			i_2 |= 0x7;
 
 		int i_10 = aClass19_10359.method578();
@@ -1024,7 +1024,7 @@ public class PlayerEntity extends PathingEntity {
 		if (i_8 == 0 && i_9 == 0)
 			method15895(i_10, getSize() << 9, getSize() << 9, 0, 0);
 		else {
-			method15895(i_10, i_8, i_9, renderanimdefs_5.anInt2813, renderanimdefs_5.anInt2790);
+			method15895(i_10, i_8, i_9, renderanimdefs_5.hill_max_angle_x, renderanimdefs_5.hill_max_angle_z);
 			if (anInt10322 != 0)
 				meshrasterizer_12.t(anInt10322);
 

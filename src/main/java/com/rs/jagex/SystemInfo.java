@@ -87,31 +87,31 @@ public class SystemInfo extends Node {
 					i_10 <<= 1;
 				else if (b_9 == MoveSpeed.HALF_WALK.id)
 					i_10 >>= 1;
-				if (renderanimdefs_3.anInt2826 != -1) {
+				if (renderanimdefs_3.movement_acceleration != -1) {
 					i_10 <<= 9;
 					if (animable_0.anInt10355 == 1) {
 						i_12 = animable_0.anInt10368 * animable_0.anInt10368;
 						int i_13 = ((int) vector3_21.x > i_7 ? (int) vector3_21.x - i_7 : i_7 - (int) vector3_21.x) << 9;
 						int i_14 = ((int) vector3_21.z > i_8 ? (int) vector3_21.z - i_8 : i_8 - (int) vector3_21.z) << 9;
 						int i_15 = Math.max(i_13, i_14);
-						int i_16 = i_15 * renderanimdefs_3.anInt2826 * 2;
+						int i_16 = i_15 * renderanimdefs_3.movement_acceleration * 2;
 						if (i_12 > i_16)
 							animable_0.anInt10368 /= 2;
 						else if (i_12 / 2 > i_15) {
-							animable_0.anInt10368 -= renderanimdefs_3.anInt2826;
+							animable_0.anInt10368 -= renderanimdefs_3.movement_acceleration;
 							if (animable_0.anInt10368 < 0)
 								animable_0.anInt10368 = 0;
 						} else if (animable_0.anInt10368 < i_10) {
-							animable_0.anInt10368 += renderanimdefs_3.anInt2826;
+							animable_0.anInt10368 += renderanimdefs_3.movement_acceleration;
 							if (animable_0.anInt10368 > i_10)
 								animable_0.anInt10368 = i_10;
 						}
 					} else if (animable_0.anInt10368 < i_10) {
-						animable_0.anInt10368 += renderanimdefs_3.anInt2826;
+						animable_0.anInt10368 += renderanimdefs_3.movement_acceleration;
 						if (animable_0.anInt10368 > i_10)
 							animable_0.anInt10368 = i_10;
 					} else if (animable_0.anInt10368 > 0) {
-						animable_0.anInt10368 -= renderanimdefs_3.anInt2826;
+						animable_0.anInt10368 -= renderanimdefs_3.movement_acceleration;
 						if (animable_0.anInt10368 < 0)
 							animable_0.anInt10368 = 0;
 					}

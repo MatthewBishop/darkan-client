@@ -21,10 +21,10 @@ public class CursorIndexLoader {
 			}
 			if (entity != null) {
 				BASDefinitions renderanimdefs_19 = ((PathingEntity) entity).getRenderAnimDefs();
-				if (renderanimdefs_19.anIntArrayArray2802 != null && renderanimdefs_19.anIntArrayArray2802[basOffIdx] != null)
-					startHeight -= renderanimdefs_19.anIntArrayArray2802[basOffIdx][1];
-				if (renderanimdefs_19.anIntArrayArray2791 != null && renderanimdefs_19.anIntArrayArray2791[basOffIdx] != null)
-					startHeight -= renderanimdefs_19.anIntArrayArray2791[basOffIdx][1];
+				if (renderanimdefs_19.equipmentTransforms != null && renderanimdefs_19.equipmentTransforms[basOffIdx] != null)
+					startHeight -= renderanimdefs_19.equipmentTransforms[basOffIdx][1];
+				if (renderanimdefs_19.spotAnimOffsets != null && renderanimdefs_19.spotAnimOffsets[basOffIdx] != null)
+					startHeight -= renderanimdefs_19.spotAnimOffsets[basOffIdx][1];
 			}
 		}
 		ProjectileAnimation projectile = new ProjectileAnimation(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(), spotAnimId, Class272.UPDATE_ZONE_PLANE, Class272.UPDATE_ZONE_PLANE, localX, localY, startHeight, startTime + client.FRAME_COUNT, endTime + client.FRAME_COUNT, angle, slope, source, lockOn, endHeight, useFloorHeight, basOffIdx);

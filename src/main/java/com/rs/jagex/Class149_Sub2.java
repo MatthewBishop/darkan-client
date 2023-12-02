@@ -22,8 +22,8 @@ public class Class149_Sub2 extends Class149 {
 		BASDefinitions renderanimdefs_3 = player_0.getRenderAnimDefs();
 		int i_4 = player_0.aAnimation_Sub3_10337.method7597();
 		if (i_4 != -1 && !player_0.aAnimation_Sub3_10337.aBool7891) {
-			if (i_4 != renderanimdefs_3.runningAnimation && i_4 != renderanimdefs_3.runDir3 && i_4 != renderanimdefs_3.runDir1 && i_4 != renderanimdefs_3.runDir2) {
-				if (i_4 == renderanimdefs_3.teleportingAnimation || i_4 == renderanimdefs_3.teleDir3 || i_4 == renderanimdefs_3.teleDir1 || i_4 == renderanimdefs_3.teleDir2)
+			if (i_4 != renderanimdefs_3.run_anim && i_4 != renderanimdefs_3.run_follow_full_turn_anim && i_4 != renderanimdefs_3.run_follow_cw_turn_anim && i_4 != renderanimdefs_3.run_follow_ccw_turn_anim) {
+				if (i_4 == renderanimdefs_3.slow_walk_anim || i_4 == renderanimdefs_3.slow_walk_follow_full_turn_anim || i_4 == renderanimdefs_3.slow_walk_follow_cw_turn_anim || i_4 == renderanimdefs_3.slow_walk_follow_ccw_turn_anim)
 					i_2 = player_0.rotate180Animation;
 			} else
 				i_2 = player_0.rotate90LeftAnimation;

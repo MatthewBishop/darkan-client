@@ -5729,17 +5729,17 @@ public class CS2Interpreter {
 	static void method15408(CS2Executor executor) {
 		int i_2 = executor.intStack[--executor.intStackPtr];
 		BASDefinitions bas = IndexLoaders.RENDER_ANIM_LOADER.getBASDefs(i_2);
-		if (bas.randomStandAnimations != null && bas.randomStandAnimations.length > 0) {
+		if (bas.idle_anims != null && bas.idle_anims.length > 0) {
 			int i_4 = 0;
-			int i_5 = bas.randomStandAnimationChances[0];
-			for (int i_6 = 1; i_6 < bas.randomStandAnimations.length; i_6++)
-				if (bas.randomStandAnimationChances[i_6] > i_5) {
+			int i_5 = bas.idle_anim_weight[0];
+			for (int i_6 = 1; i_6 < bas.idle_anims.length; i_6++)
+				if (bas.idle_anim_weight[i_6] > i_5) {
 					i_4 = i_6;
-					i_5 = bas.randomStandAnimationChances[i_6];
+					i_5 = bas.idle_anim_weight[i_6];
 				}
-			executor.intStack[++executor.intStackPtr - 1] = bas.randomStandAnimations[i_4];
+			executor.intStack[++executor.intStackPtr - 1] = bas.idle_anims[i_4];
 		} else
-			executor.intStack[++executor.intStackPtr - 1] = bas.standAnimation;
+			executor.intStack[++executor.intStackPtr - 1] = bas.stand_animation;
 	}
 
 	static void method15409(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_2) {

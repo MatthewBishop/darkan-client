@@ -45,11 +45,11 @@ public class ItemContainer extends Node {
 			renderanimdefs_10 = IndexLoaders.RENDER_ANIM_LOADER.getBASDefs(i_4);
 
 		int[] ints_11 = itemIds;
-		if (renderanimdefs_10 != null && renderanimdefs_10.anIntArray2811 != null) {
-			ints_11 = new int[renderanimdefs_10.anIntArray2811.length];
+		if (renderanimdefs_10 != null && renderanimdefs_10.inv_item_slots != null) {
+			ints_11 = new int[renderanimdefs_10.inv_item_slots.length];
 
-			for (int i_12 = 0; i_12 < renderanimdefs_10.anIntArray2811.length; i_12++) {
-				int i_13 = renderanimdefs_10.anIntArray2811[i_12];
+			for (int i_12 = 0; i_12 < renderanimdefs_10.inv_item_slots.length; i_12++) {
+				int i_13 = renderanimdefs_10.inv_item_slots[i_12];
 				if (i_13 >= 0 && i_13 < itemIds.length)
 					ints_11[i_12] = itemIds[i_13];
 				else
@@ -87,15 +87,15 @@ public class ItemContainer extends Node {
 
 			int i_18;
 			int i_19;
-			if (renderanimdefs_10 != null && renderanimdefs_10.anIntArrayArray2802 != null)
-				for (i_17 = 0; i_17 < renderanimdefs_10.anIntArrayArray2802.length; i_17++)
-					if (renderanimdefs_10.anIntArrayArray2802[i_17] != null && arr_27[i_17] != null) {
-						i_18 = renderanimdefs_10.anIntArrayArray2802[i_17][0];
-						i_19 = renderanimdefs_10.anIntArrayArray2802[i_17][1];
-						int i_20 = renderanimdefs_10.anIntArrayArray2802[i_17][2];
-						int i_21 = renderanimdefs_10.anIntArrayArray2802[i_17][3];
-						int i_22 = renderanimdefs_10.anIntArrayArray2802[i_17][4];
-						int i_23 = renderanimdefs_10.anIntArrayArray2802[i_17][5];
+			if (renderanimdefs_10 != null && renderanimdefs_10.equipmentTransforms != null)
+				for (i_17 = 0; i_17 < renderanimdefs_10.equipmentTransforms.length; i_17++)
+					if (renderanimdefs_10.equipmentTransforms[i_17] != null && arr_27[i_17] != null) {
+						i_18 = renderanimdefs_10.equipmentTransforms[i_17][0];
+						i_19 = renderanimdefs_10.equipmentTransforms[i_17][1];
+						int i_20 = renderanimdefs_10.equipmentTransforms[i_17][2];
+						int i_21 = renderanimdefs_10.equipmentTransforms[i_17][3];
+						int i_22 = renderanimdefs_10.equipmentTransforms[i_17][4];
+						int i_23 = renderanimdefs_10.equipmentTransforms[i_17][5];
 						if (i_21 != 0 || i_22 != 0 || i_23 != 0)
 							arr_27[i_17].method2671(i_21, i_22, i_23);
 

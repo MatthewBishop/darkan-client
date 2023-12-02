@@ -446,8 +446,8 @@ public class NPCDefinitions {
 					}
 				}
 			int i_27;
-			if (renderanimdefs_45 != null && renderanimdefs_45.anIntArrayArray2802 != null)
-				for (i_25 = 0; i_25 < renderanimdefs_45.anIntArrayArray2802.length; i_25++)
+			if (renderanimdefs_45 != null && renderanimdefs_45.equipmentTransforms != null)
+				for (i_25 = 0; i_25 < renderanimdefs_45.equipmentTransforms.length; i_25++)
 					if (i_25 < arr_47.length && arr_47[i_25] != null) {
 						int i_35 = 0;
 						i_27 = 0;
@@ -455,13 +455,13 @@ public class NPCDefinitions {
 						int i_29 = 0;
 						int i_30 = 0;
 						int i_31 = 0;
-						if (renderanimdefs_45.anIntArrayArray2802[i_25] != null) {
-							i_35 = renderanimdefs_45.anIntArrayArray2802[i_25][0];
-							i_27 = renderanimdefs_45.anIntArrayArray2802[i_25][1];
-							i_28 = renderanimdefs_45.anIntArrayArray2802[i_25][2];
-							i_29 = renderanimdefs_45.anIntArrayArray2802[i_25][3] << 3;
-							i_30 = renderanimdefs_45.anIntArrayArray2802[i_25][4] << 3;
-							i_31 = renderanimdefs_45.anIntArrayArray2802[i_25][5] << 3;
+						if (renderanimdefs_45.equipmentTransforms[i_25] != null) {
+							i_35 = renderanimdefs_45.equipmentTransforms[i_25][0];
+							i_27 = renderanimdefs_45.equipmentTransforms[i_25][1];
+							i_28 = renderanimdefs_45.equipmentTransforms[i_25][2];
+							i_29 = renderanimdefs_45.equipmentTransforms[i_25][3] << 3;
+							i_30 = renderanimdefs_45.equipmentTransforms[i_25][4] << 3;
+							i_31 = renderanimdefs_45.equipmentTransforms[i_25][5] << 3;
 						}
 						if (i_29 != 0 || i_30 != 0 || i_31 != 0)
 							arr_47[i_25].method2671(i_29, i_30, i_31);

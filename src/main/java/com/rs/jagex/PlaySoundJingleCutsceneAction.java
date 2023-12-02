@@ -18,8 +18,8 @@ public class PlaySoundJingleCutsceneAction extends CutsceneAction {
 			renderanimdefs_7 = class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub2_8085.getRenderAnimDefs();
 			i_8 = class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub2_8085.aAnimation_Sub3_10337.method7597();
 			if (i_8 != -1 && !class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub2_8085.aAnimation_Sub3_10337.aBool7891) {
-				if (i_8 != renderanimdefs_7.runningAnimation && i_8 != renderanimdefs_7.runDir3 && i_8 != renderanimdefs_7.runDir1 && i_8 != renderanimdefs_7.runDir2) {
-					if (i_8 == renderanimdefs_7.teleportingAnimation || i_8 == renderanimdefs_7.teleDir3 || i_8 == renderanimdefs_7.teleDir1 || i_8 == renderanimdefs_7.teleDir2)
+				if (i_8 != renderanimdefs_7.run_anim && i_8 != renderanimdefs_7.run_follow_full_turn_anim && i_8 != renderanimdefs_7.run_follow_cw_turn_anim && i_8 != renderanimdefs_7.run_follow_ccw_turn_anim) {
+					if (i_8 == renderanimdefs_7.slow_walk_anim || i_8 == renderanimdefs_7.slow_walk_follow_full_turn_anim || i_8 == renderanimdefs_7.slow_walk_follow_cw_turn_anim || i_8 == renderanimdefs_7.slow_walk_follow_ccw_turn_anim)
 						b_6 = 3;
 				} else
 					b_6 = 2;
@@ -78,8 +78,8 @@ public class PlaySoundJingleCutsceneAction extends CutsceneAction {
 			renderanimdefs_7 = class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub1_8086.getRenderAnimDefs();
 			i_8 = class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub1_8086.aAnimation_Sub3_10337.method7597();
 			if (i_8 != -1 && !class282_sub48_5.aTransform_Sub1_Sub1_Sub2_Sub1_8086.aAnimation_Sub3_10337.aBool7891) {
-				if (i_8 != renderanimdefs_7.runningAnimation && i_8 != renderanimdefs_7.runDir3 && i_8 != renderanimdefs_7.runDir1 && i_8 != renderanimdefs_7.runDir2) {
-					if (i_8 == renderanimdefs_7.teleportingAnimation || i_8 == renderanimdefs_7.teleDir3 || i_8 == renderanimdefs_7.teleDir1 || i_8 == renderanimdefs_7.teleDir2)
+				if (i_8 != renderanimdefs_7.run_anim && i_8 != renderanimdefs_7.run_follow_full_turn_anim && i_8 != renderanimdefs_7.run_follow_cw_turn_anim && i_8 != renderanimdefs_7.run_follow_ccw_turn_anim) {
+					if (i_8 == renderanimdefs_7.slow_walk_anim || i_8 == renderanimdefs_7.slow_walk_follow_full_turn_anim || i_8 == renderanimdefs_7.slow_walk_follow_cw_turn_anim || i_8 == renderanimdefs_7.slow_walk_follow_ccw_turn_anim)
 						b_6 = 3;
 				} else
 					b_6 = 2;

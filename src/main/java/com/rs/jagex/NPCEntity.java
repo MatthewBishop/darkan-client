@@ -121,7 +121,7 @@ public class NPCEntity extends PathingEntity {
 		NPCDefinitions npcdefinitions_8 = definitions.transformTo != null ? definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER) : definitions;
 		aBool10312 = false;
 		Class285 class285_9 = null;
-		if (Class393.preferences.characterShadows.method12966() == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.aBool2787) {
+		if (Class393.preferences.characterShadows.method12966() == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.animate_shadow) {
 			Animation animation_10 = currentAnimation.hasDefs() && currentAnimation.hasSpeed() ? currentAnimation : null;
 			MovingAnimation class456_sub3_11 = !aAnimation_Sub3_10337.hasDefs() || aAnimation_Sub3_10337.aBool7891 && animation_10 != null ? null : aAnimation_Sub3_10337;
 			MeshRasterizer meshrasterizer_12 = SongReference.method1969(graphicalrenderer_1, anInt10322 * 2085530051 * -35614997, -1768311789 * anInt10323 * 884618779, -628205413 * anInt10363 * -1453470317, 1203434505 * definitions.size * -1156523463, aMeshRasterizerArray10372[0], definitions.aShort4874 & 0xffff, definitions.aShort4897 & 0xffff, definitions.aByte4883 & 0xff, definitions.aByte4899 & 0xff, class456_sub3_11 != null ? class456_sub3_11 : animation_10);
@@ -191,7 +191,7 @@ public class NPCEntity extends PathingEntity {
 		NPCDefinitions npcdefinitions_9 = definitions.transformTo != null ? definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER) : definitions;
 		aBool10312 = false;
 		Class285 class285_10 = null;
-		if (Class393.preferences.characterShadows.method12966() == 1 && npcdefinitions_9.aBool4912 && renderanimdefs_14.aBool2787) {
+		if (Class393.preferences.characterShadows.method12966() == 1 && npcdefinitions_9.aBool4912 && renderanimdefs_14.animate_shadow) {
 			Animation animation_11 = currentAnimation.hasDefs() && currentAnimation.hasSpeed() ? currentAnimation : null;
 			MovingAnimation class456_sub3_12 = !aAnimation_Sub3_10337.hasDefs() || aAnimation_Sub3_10337.aBool7891 && animation_11 != null ? null : aAnimation_Sub3_10337;
 			MeshRasterizer meshrasterizer_13 = SongReference.method1969(graphicalrenderer_1, anInt10322, anInt10323, anInt10363, definitions.size, aMeshRasterizerArray10372[0], definitions.aShort4874 & 0xffff, definitions.aShort4897 & 0xffff, definitions.aByte4883 & 0xff, definitions.aByte4899 & 0xff, class456_sub3_12 != null ? class456_sub3_12 : animation_11);
@@ -300,7 +300,7 @@ public class NPCEntity extends PathingEntity {
 		NPCDefinitions npcdefinitions_8 = definitions.transformTo != null ? definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER) : definitions;
 		aBool10312 = false;
 		Class285 class285_9 = null;
-		if (Class393.preferences.characterShadows.method12966() == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.aBool2787) {
+		if (Class393.preferences.characterShadows.method12966() == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.animate_shadow) {
 			Animation animation_10 = currentAnimation.hasDefs() && currentAnimation.hasSpeed() ? currentAnimation : null;
 			MovingAnimation class456_sub3_11 = !aAnimation_Sub3_10337.hasDefs() || aAnimation_Sub3_10337.aBool7891 && animation_10 != null ? null : aAnimation_Sub3_10337;
 			MeshRasterizer meshrasterizer_12 = SongReference.method1969(graphicalrenderer_1, anInt10322 * 2085530051 * -35614997, -1768311789 * anInt10323 * 884618779, -628205413 * anInt10363 * -1453470317, 1203434505 * definitions.size * -1156523463, aMeshRasterizerArray10372[0], definitions.aShort4874 & 0xffff, definitions.aShort4897 & 0xffff, definitions.aByte4883 & 0xff, definitions.aByte4899 & 0xff, class456_sub3_11 != null ? class456_sub3_11 : animation_10);
@@ -370,7 +370,7 @@ public class NPCEntity extends PathingEntity {
 		NPCDefinitions npcdefinitions_8 = definitions.transformTo != null ? definitions.getMultiNPC(Class158_Sub1.PLAYER_VAR_PROVIDER) : definitions;
 		aBool10312 = false;
 		Class285 class285_9 = null;
-		if (Class393.preferences.characterShadows.method12966() == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.aBool2787) {
+		if (Class393.preferences.characterShadows.method12966() == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.animate_shadow) {
 			Animation animation_10 = currentAnimation.hasDefs() && currentAnimation.hasSpeed() ? currentAnimation : null;
 			MovingAnimation class456_sub3_11 = !aAnimation_Sub3_10337.hasDefs() || aAnimation_Sub3_10337.aBool7891 && animation_10 != null ? null : aAnimation_Sub3_10337;
 			MeshRasterizer meshrasterizer_12 = SongReference.method1969(graphicalrenderer_1, anInt10322 * 2085530051 * -35614997, -1768311789 * anInt10323 * 884618779, -628205413 * anInt10363 * -1453470317, 1203434505 * definitions.size * -1156523463, aMeshRasterizerArray10372[0], definitions.aShort4874 & 0xffff, definitions.aShort4897 & 0xffff, definitions.aByte4883 & 0xff, definitions.aByte4899 & 0xff, class456_sub3_11 != null ? class456_sub3_11 : animation_10);
@@ -678,9 +678,9 @@ public class NPCEntity extends PathingEntity {
 		BASDefinitions renderanimdefs_5 = getRenderAnimDefs();
 		Animation animation_6 = currentAnimation.hasDefs() && !currentAnimation.hasSpeed() ? currentAnimation : null;
 		MovingAnimation class456_sub3_7 = aAnimation_Sub3_10337.hasDefs() && (!aAnimation_Sub3_10337.aBool7891 || animation_6 == null) ? aAnimation_Sub3_10337 : null;
-		int i_8 = renderanimdefs_5.anInt2786;
-		int i_9 = renderanimdefs_5.anInt2829;
-		if (i_8 != 0 || i_9 != 0 || renderanimdefs_5.anInt2824 != 0 || renderanimdefs_5.anInt2827 != 0)
+		int i_8 = renderanimdefs_5.hill_width;
+		int i_9 = renderanimdefs_5.hill_height;
+		if (i_8 != 0 || i_9 != 0 || renderanimdefs_5.roll_target_angle != 0 || renderanimdefs_5.pitch_target_angle != 0)
 			i_2 |= 0x7;
 
 		boolean bool_10 = scalar != 0 && client.FRAME_COUNT >= anInt10347 && client.FRAME_COUNT < anInt10348;
@@ -697,7 +697,7 @@ public class NPCEntity extends PathingEntity {
 		if (i_8 == 0 && i_9 == 0)
 			method15895(i_11, getSize() << 9, getSize() << 9, 0, 0);
 		else {
-			method15895(i_11, i_8, i_9, renderanimdefs_5.anInt2813, renderanimdefs_5.anInt2790);
+			method15895(i_11, i_8, i_9, renderanimdefs_5.hill_max_angle_x, renderanimdefs_5.hill_max_angle_z);
 			if (anInt10322 != 0)
 				aMeshRasterizerArray10372[0].t(anInt10322);
 
